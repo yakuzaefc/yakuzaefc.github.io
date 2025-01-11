@@ -1,0 +1,192 @@
+/* Resetting default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and General Layout */
+body, html {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  background: url('../images/store.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  background-color: #111; /* Dark background for futuristic feel */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  z-index: 80; 
+}
+
+header .logo img {
+  height: 50px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #ff0000;
+  text-shadow: 0 0 10px #ff0000;
+}
+/* Main Container */
+.store-main {
+  padding-top: 80px; /* Account for fixed header */
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+/* Store Header */
+.store-header h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.store-header h1:hover {
+  color: #ff0000;
+}
+
+.store-header p {
+  font-size: 24px;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Latest Hits Section */
+.latest-hits h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff; /* Neon Green */
+}
+
+/* Flexbox Grid for Product Items */
+.product-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.product-item {
+  background: rgba(255, 0, 0, 0.5); /* Slightly transparent red */
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: 18%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.product-item:hover {
+  transform: scale(1.05); /* Slightly enlarges on hover */
+  background-color: rgba(255, 0, 0, 0.8); /* Darker red on hover */
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.product-item h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product-item p {
+  font-size: 18px;
+}
+
+/* Contact Info */
+.contact-info {
+  font-size: 20px;
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-info strong {
+  font-weight: bold;
+}
+
+/* Instagram Link */
+.ig-link {
+  font-size: 24px;
+  color: #ffffff; /* Neon green */
+  text-decoration: none; /* Remove underline */
+  letter-spacing: 2px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.ig-link:hover {
+  color: #ff0000; /* Purple hover color */
+  transform: scale(1.1); /* Enlarge text on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px 15px;
+  }
+
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header nav ul li {
+    margin: 5px 0;
+  }
+
+  .store-header h1 {
+    font-size: 30px;
+  }
+
+  .store-header p {
+    font-size: 18px;
+  }
+
+  .contact-info {
+    font-size: 18px;
+  }
+
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-item {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}

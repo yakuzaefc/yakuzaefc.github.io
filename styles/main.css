@@ -1,0 +1,142 @@
+/* Resetting default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  background: url('../images/dojo.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.8); /* Fallback for transparency */
+  background-blend-mode: darken;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #ff0000;
+  text-shadow: 0 0 10px #ff0000;
+}
+
+/* Centering Main Section */
+.main-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  margin-top: 0; /* Reset fixed header offset */
+}
+
+.main-section h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ff0000;
+  text-shadow: 0 0 20px #ff0000, 0 0 30px #ff4500;
+}
+
+.main-section h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.main-section hr {
+  width: 60%;
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, #ff0000, transparent);
+  margin: 20px 0;
+}
+
+.slogan {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ccc;
+  text-shadow: 0 0 10px #fff;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff0000, 0 0 30px #ff4500;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 15px #ff4500, 0 0 25px #ff0000;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px 15px;
+  }
+
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header nav ul li {
+    margin: 5px 0;
+  }
+
+  .main-section h1 {
+    font-size: 50px;
+  }
+
+  .main-section h2 {
+    font-size: 28px;
+  }
+
+  .slogan {
+    font-size: 20px;
+  }
+}
